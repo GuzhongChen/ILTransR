@@ -1,1 +1,56 @@
-# ILTransR
+## Generalizing property prediction of ionic liquids from limited labeled data: a one-stop framework empowered by transfer learning ##
+
+</br>
+Guzhong Chen<sup>a,b</sup>, Zhen Song<sup>a</sup>, Zhiwen Qi<sup>a</sup>
+<sup>a</sup> State Key laboratory of Chemical Engineering, School of Chemical Engineering, East China University of Science and Technology, 130 Meilong Road, Shanghai 200237, China
+<sup>b</sup> Process Systems Engineering, Max Planck Institute for Dynamics of Complex Technical Systems, Sandtorstr. 1, D-39106 Magdeburg, Germany
+
+
+<img src="figs/pipeline.gif" width="450">
+
+This is the official implementation of <strong><em>ILTransR</em></strong>: Generalizing property prediction of ionic liquids from limited labeled data: a one-stop framework empowered by transfer learning. In this work, we present a one-stop <strong><em>ILTransR</em></strong> (IL transfer learning of Representations), a pre-training fine-tuning paradigm that leverages large-scale unlabeled data for generalizing IL property prediction from limited labeled data.
+
+
+## Getting Started
+
+### Installation
+
+Set up conda environment and clone the github repo
+
+```
+# create a new environment
+$ conda create --name iltransr python=3.8
+$ conda activate iltransr
+
+# install requirements
+$ pip install mxnet-cu112
+$ pip install gluonnlp
+$ pip install PyYAML
+$ pip install rdkit-pypi==2022.3.2.1
+
+# clone the source code of ILTransR
+$ git clone https://github.com/GuzhongChen/ILTransR.git
+$ cd ILTransR
+```
+
+### Dataset
+
+You can download the original Pubchem coumpound database [here](ftp://ftp.ncbi.nlm.nih.gov/pubchem/Compound/). The IL-like dataset for pre-training can be found in `data/pubchem_illike_100.csv`. All the IL propertes datasets for fine-tuning are saved in the folder under the benchmark name. 
+
+### Pre-training
+
+To pre-train the IL Transformer on the IL-like dataset,run
+```
+$ python molclr.py
+```
+
+### Fine-tuning 
+
+To fine-tune the ILTransR on eleven downstream IL properties datasets, run
+```
+$ python finetune.py
+```
+
+### Pre-trained models
+
+We also provide pre-trained models, which can be found in '/'. 
