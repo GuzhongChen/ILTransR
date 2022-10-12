@@ -1,14 +1,13 @@
 ## Generalizing property prediction of ionic liquids from limited labeled data: a one-stop framework empowered by transfer learning ##
 
-</br>
-Guzhong Chen<sup>a,b</sup>, Zhen Song<sup>a</sup>, Zhiwen Qi<sup>a</sup>
-<sup>a</sup> State Key laboratory of Chemical Engineering, School of Chemical Engineering, East China University of Science and Technology, 130 Meilong Road, Shanghai 200237, China
-<sup>b</sup> Process Systems Engineering, Max Planck Institute for Dynamics of Complex Technical Systems, Sandtorstr. 1, D-39106 Magdeburg, Germany
+Guzhong Chen<sup>a,b</sup>, Zhen Song<sup>a</sup>, Zhiwen Qi<sup>a</sup>  
+<sup>a</sup> State Key laboratory of Chemical Engineering, School of Chemical Engineering, East China University of Science and Technology, 130 Meilong Road, Shanghai 200237, China  
+<sup>b</sup> Process Systems Engineering, Max Planck Institute for Dynamics of Complex Technical Systems, Sandtorstr. 1, D-39106 Magdeburg, Germany  
 
 
-<img src="figs/pipeline.gif" width="450">
+<img src="figs/pipeline.png" width="450">
 
-This is the official implementation of <strong><em>ILTransR</em></strong>: Generalizing property prediction of ionic liquids from limited labeled data: a one-stop framework empowered by transfer learning. In this work, we present a one-stop <strong><em>ILTransR</em></strong> (IL transfer learning of Representations), a pre-training fine-tuning paradigm that leverages large-scale unlabeled data for generalizing IL property prediction from limited labeled data.
+This is the official implementation of "Generalizing property prediction of ionic liquids from limited labeled data: a one-stop framework empowered by transfer learning". In this work, we present a one-stop <strong><em>ILTransR</em></strong> (IL transfer learning of Representations), a pre-training fine-tuning paradigm that leverages large-scale unlabeled data for generalizing IL property prediction from limited labeled data.
 
 
 ## Getting Started
@@ -41,7 +40,7 @@ You can download the original Pubchem coumpound database [here](ftp://ftp.ncbi.n
 
 To pre-train the IL Transformer on the IL-like dataset,run
 ```
-$ python molclr.py
+$ python pre-train_IL_Transformer.py
 ```
 
 ### Fine-tuning 
