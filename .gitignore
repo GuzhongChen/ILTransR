@@ -127,3 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+datasets/pubchem/test.random_smiles
+datasets/pubchem/test.rdkit_canonical_smiles
+datasets/pubchem/train.random_smiles
+datasets/pubchem/train.rdkit_canonical_smiles
+datasets/pubchem/val.random_smiles
+datasets/pubchem/val.rdkit_canonical_smiles
+utils/nmt/cached/pubchem_100_test.npz
+utils/nmt/cached/pubchem_100_train.npz
+utils/nmt/cached/pubchem_100_val.npz
+pretraining/test_smiles.txt
+pretraining/val_smiles.txt
