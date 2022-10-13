@@ -50,11 +50,11 @@ $ python pre-train_IL_Transformer.py
 Pre-traing log can be found in `pretraining/il_transformer_128_1024.log`
 ### Fine-tuning 
 
-To fine-tune the ILTransR on eleven downstream IL properties datasets, run
-```
-$ python finetune.py
-```
+To fine-tune the ILTransR on eleven downstream IL properties datasets, run jupyter notebooks in 'examples'.
 
 ### Pre-trained models
 
-We also provide pre-trained models, which can be found in '/'. 
+We also provide pre-trained models, which can be found in 'iltransr/pre-trained params'. 
+
+### Application example of ILTransR: CO2 absorbent screening
+
