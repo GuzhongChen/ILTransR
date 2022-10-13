@@ -47,7 +47,7 @@ To pre-train the IL Transformer on the IL-like dataset,run
 ```
 $ python pre-train_IL_Transformer.py
 ```
-Pre-traing log can be found in `pretraining/il_transformer_128_1024.log`
+Pre-training log can be found in `pretraining/il_transformer_128_1024.log`
 ### Fine-tuning 
 
 To fine-tune the ILTransR on eleven downstream IL properties datasets, run jupyter notebooks in 'examples'.
