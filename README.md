@@ -54,7 +54,9 @@ To fine-tune the ILTransR on eleven downstream IL properties datasets, run jupyt
 
 ### Pre-trained models
 
-We also provide pre-trained models, which can be found in 'iltransr/pre-trained params'. 
+Pre-trained IL Transformer can be found in 'pre-training/valid_best.params'.
+
+We also provide pre-trained models for IL properties prediction, which can be found in 'iltransr/pre-trained params'. 
 
 ### Application example of ILTransR: CO2 absorbent screening
 
