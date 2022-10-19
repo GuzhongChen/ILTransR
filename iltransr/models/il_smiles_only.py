@@ -46,7 +46,7 @@ def get_r2(label, pred, multioutput='uniform_average'):
     return r2
 
 from sklearn.metrics import mean_squared_error
-def train(net, train_data, batch_size, learning_rate, context, epochs,log_interval=10, dev_data=None, fold=None ):
+def train(net, train_data, batch_size, learning_rate, context, epochs,log_interval=10, dev_data=None, fold=None, save_name=None):
     start_pipeline_time = time.time()
     net.textcnn.initialize(mx.init.Xavier(), ctx=context, force_reinit=True)
     net.output.initialize(mx.init.Xavier(), ctx=context, force_reinit=True)
@@ -104,7 +104,7 @@ def train(net, train_data, batch_size, learning_rate, context, epochs,log_interv
         
         if  (epoch_L/ epoch_sent_num) < best_epoch_L:
             best_epoch_L = epoch_L
-            save_path = os.path.join(save_dir, 'TOX_best.params')
+            save_path = os.path.join(save_dir, save_name)
             net.save_parameters(save_path)
          
         
@@ -126,6 +126,43 @@ def predict(net, dataloader,context):
         output = net(data,length)
         out= out+[f for f in output.asnumpy()]
     return out
+
+def get_train_dataloader(train_dataset,train_smiles_lengths,batch_size=None, bucket_num=None,bucket_ratio=None):
+
+    # Pad data, stack label and lengths
+    batchify_fn = nlp.data.batchify.Tuple(
+        nlp.data.batchify.Pad(axis=0, pad_val=0, ret_length=True),
+        nlp.data.batchify.Stack(dtype='float32'))
+    train_batch_sampler = nlp.data.sampler.FixedBucketSampler(
+        train_smiles_lengths,
+        batch_size=batch_size,
+        num_buckets=bucket_num,
+        ratio=bucket_ratio,
+        shuffle=True)
+
+    # Construct a DataLoader object for both the training and test data
+    train_dataloader = gluon.data.DataLoader(dataset=train_dataset,
+                                             batch_sampler=train_batch_sampler,
+                                             batchify_fn=batchify_fn)
+    return train_dataloader
+
+def get_predict_dataloader(predict_dataset,predict_smiles_lengths,batch_size=None, bucket_num=None,bucket_ratio=None):
+
+    # Pad data, stack label and lengths
+    batchify_fn = nlp.data.batchify.Tuple(
+        nlp.data.batchify.Pad(axis=0, pad_val=0, ret_length=True),
+        nlp.data.batchify.Stack(dtype='float32'))
+    predict_batch_sampler = nlp.data.sampler.FixedBucketSampler(
+        predict_smiles_lengths,
+        batch_size=batch_size,
+        num_buckets=bucket_num,
+        ratio=bucket_ratio,
+        shuffle=False)
+
+    predict_dataloader = gluon.data.DataLoader(dataset=predict_dataset,
+                                             batch_sampler=predict_batch_sampler,
+                                             batchify_fn=batchify_fn)
+    return predict_dataloader
 
 
 

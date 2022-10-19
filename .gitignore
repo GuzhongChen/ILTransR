@@ -138,3 +138,9 @@ utils/nmt/cached/pubchem_100_train.npz
 utils/nmt/cached/pubchem_100_val.npz
 pretraining/test_smiles.txt
 pretraining/val_smiles.txt
+examples/predicted_co2.csv
+examples/predicted_CP.csv
+examples/predicted_MP.csv
+examples/predicted_TD.csv
+examples/predicted_TOX.csv
+examples/predicted_viscosity.csv

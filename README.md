@@ -34,7 +34,7 @@ $ cd ILTransR
 
 ### Dataset
 
-You can download the original Pubchem coumpound database [here](ftp://ftp.ncbi.nlm.nih.gov/pubchem/Compound/). The IL-like dataset for pre-training can be found in `data/pubchem_illike_100.csv`. All the IL propertes datasets for fine-tuning are saved in the folder under the benchmark name. 
+You can download the original Pubchem coumpound database [here](ftp://ftp.ncbi.nlm.nih.gov/pubchem/Compound/). The IL-like dataset for pre-training can be found in `data/pubchem_illike_100.csv`. All the IL propertes datasets for fine-tuning are saved in 'datasets/il properties'. 
 
 ### Pre-training
 
@@ -50,7 +50,9 @@ $ python pre-train_IL_Transformer.py
 Pre-training log can be found in `pretraining/il_transformer_128_1024.log`
 ### Fine-tuning 
 
-To fine-tune the ILTransR on eleven downstream IL properties datasets, run jupyter notebooks in 'examples'.
+To fine-tune the ILTransR on downstream IL properties datasets, run jupyter notebooks in 'examples'.
+
+More IL properties will be added in the future.
 
 ### Pre-trained models
 
@@ -59,4 +61,6 @@ Pre-trained IL Transformer can be found in 'pre-training/valid_best.params'.
 We also provide pre-trained models for IL properties prediction, which can be found in 'iltransr/pre-trained params'. 
 
 ### Application example of ILTransR: CO2 absorbent screening
+
+TO BE ADDED
 
