@@ -34,7 +34,7 @@ $ cd ILTransR
 
 ### Dataset
 
-You can download the original Pubchem coumpound database [here](ftp://ftp.ncbi.nlm.nih.gov/pubchem/Compound/). The IL-like dataset for pre-training can be found in `data/pubchem_illike_100.csv`. All the IL propertes datasets for fine-tuning are saved in 'datasets/il properties'. 
+You can download the original Pubchem coumpound database [here](ftp://ftp.ncbi.nlm.nih.gov/pubchem/Compound/). The IL-like dataset for pre-training can be found in `data/pubchem_illike_100.csv`. All the IL propertes datasets for fine-tuning are saved in `datasets/il properties`. 
 
 ### Pre-training
 
