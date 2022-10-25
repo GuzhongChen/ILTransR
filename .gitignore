@@ -145,3 +145,8 @@ examples/predicted_TD.csv
 examples/predicted_TOX.csv
 examples/predicted_viscosity.csv
 examples/predicted_density.csv
+README.md
+IL screening/predicted_IL_properties.csv
+.gitignore
+IL screening/screening_results.csv
+IL screening/co2screening.tif
