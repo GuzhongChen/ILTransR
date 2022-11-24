@@ -60,7 +60,7 @@ def preprocess_list(smiles,mul=True):
     return df
 
 if __name__ == "__main__":
-    smiles = pd.read_csv("datasets/pubchem/pubchem_ililke_100.csv")
+    smiles = pd.read_csv("datasets/pubchem/pubchem_illike_100.csv")
     smiles["rdkit_canonical_smiles"] = smiles["SMILES"].map(canonical_smile)
     smiles_=smiles.dropna(axis=0,how='any')
     illike = preprocess_list(smiles_).dropna(axis=0,how='any')
