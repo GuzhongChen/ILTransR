@@ -64,7 +64,7 @@ We also provide pre-trained models for IL properties prediction, which can be fo
 
 First, download 'predicted_IL_properties.csv' from [here](https://drive.google.com/drive/folders/11CJsfLyEy6frgaN934M_JpKo4YlR_6_i?usp=sharing) and put it under `ILTransR/IL screening`.
 
-One can also do predictions with IL SMILES provieded in 'ONLY_SMILES.csv' with the notebooks provided in `ILTransR/examples`.
+One can also do predictions with IL SMILES provieded in 'ONLY_SMILES.csv' using the notebooks provided in `ILTransR/examples`.
 
 Then, run the jupyter notebook `ILTransR/IL screening/screening.ipynb` to reprodece the screening results.
 
