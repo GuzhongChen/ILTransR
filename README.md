@@ -38,7 +38,9 @@ You can download the original Pubchem coumpound database [here](ftp://ftp.ncbi.n
 
 ### Pre-training
 
-First, preprocess the IL-like dataset, run
+First, download 'pubchem_illike_100.csv' from [here](https://drive.google.com/drive/folders/11CJsfLyEy6frgaN934M_JpKo4YlR_6_i?usp=sharing) and put it under `ILTransR/datasets/pubchem`.
+
+Then, preprocess the IL-like dataset, run
 ```
 $ python preprocess_illike.py
 ```
