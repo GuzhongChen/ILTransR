@@ -1,8 +1,14 @@
 ## Generalizing property prediction of ionic liquids from limited labeled data: a one-stop framework empowered by transfer learning ##
 
-Guzhong Chen<sup>a,b</sup>, Zhen Song<sup>a</sup>, Zhiwen Qi<sup>a</sup>  
-<sup>a</sup> State Key laboratory of Chemical Engineering, School of Chemical Engineering, East China University of Science and Technology, 130 Meilong Road, Shanghai 200237, China  
-<sup>b</sup> Process Systems Engineering, Max Planck Institute for Dynamics of Complex Technical Systems, Sandtorstr. 1, D-39106 Magdeburg, Germany  
+Guzhong Chen<sup>a,b</sup>, Zhen Song<sup>a,*</sup>, Zhiwen Qi<sup>a,*</sup>, Kai Sundmacher<sup>b,c</sup>
+
+<sup>a</sup> State Key laboratory of Chemical Engineering, School of Chemical Engineering, East China University of Science and Technology, 130 Meilong Road, Shanghai 200237, China
+
+<sup>b</sup> Process Systems Engineering, Max Planck Institute for Dynamics of Complex Technical Systems, Sandtorstr. 1, D-39106 Magdeburg, Germany
+
+<sup>c</sup> Process Systems Engineering, Otto-von-Guericke University Magdeburg, Universitätsplatz 2, D-39106 Magdeburg, Germany
+
+Corresponding authors: songz@ecust.edu.cn (Z. S.); zwqi@ecust.edu.cn (Z. Qi.)
 
 
 <img src="figs/pipeline.png" width="450">
