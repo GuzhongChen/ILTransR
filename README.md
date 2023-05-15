@@ -44,7 +44,7 @@ You can download the original Pubchem coumpound database (access date: 2020.12.1
 
 ### Pre-training
 
-First, download 'pubchem_illike_100.csv' from [here](https://drive.google.com/drive/folders/11CJsfLyEy6frgaN934M_JpKo4YlR_6_i?usp=sharing) or from [Zenodo repository](10.5281/zenodo.7935198) and put it under `ILTransR/datasets/pubchem`.
+First, download 'pubchem_illike_100.csv' from [here](https://drive.google.com/drive/folders/11CJsfLyEy6frgaN934M_JpKo4YlR_6_i?usp=sharing) or from [Zenodo repository](https://zenodo.org/record/7935198#.ZGGB7k9BztV) and put it under `ILTransR/datasets/pubchem`.
 
 Then, preprocess the IL-like dataset, run
 ```
